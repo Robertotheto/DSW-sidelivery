@@ -1,0 +1,184 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+  background: #f2f4f6;
+}
+header{
+  width:100%;
+  height: 20vh;
+  background: #F90000;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+header .header-title{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-left: 32px;
+}
+header .header-title h1{
+  color: #fff;
+  font-size: 300%;
+  margin-left: 16px;
+}
+header .iconify{
+  color: #ffffff; 
+  font-size: 900%;
+}
+header nav{
+  display: flex;
+}
+header nav button.navbar-button{
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  display:none;
+}
+button:focus~ul {
+  height: 260px;
+}
+header nav ul{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  list-style: none;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+header nav ul li{
+  margin-right: 32px;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 125%;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 0.5rem;
+  transition: background 0.1s;
+}
+header nav ul li a:hover{
+  cursor: pointer;
+  background: #FF5A00;
+}
+main{
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction:column;
+  padding: 32px;
+}
+main h1{
+  color: rgb(131, 122, 122);
+  font-size: 300%;
+}
+main table {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  box-shadow: 20px 20px 50px -30px rgba(0, 0, 0, 0.9);
+  border:none;
+  border-radius: 0.5rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+main table thead{
+  background: rgb(192, 185, 185);
+}
+main table thead th{
+  padding: 1rem;
+  color: rgb(131, 122, 122);
+  text-align: center;
+  font-weight: bold;
+}
+main table tbody td{
+  text-align: center;
+  color: #2c2d2e;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+main table tbody td a img{
+  padding: 0.125rem;
+  border-radius: 0.3rem;
+}
+main table tbody td a img.img-refresh:hover{
+  background-color: #8cbef0;
+}
+main table tbody td a img.img-trash:hover{
+  
+  background-color: #d84f4f;
+}
+footer{
+  width:100%;
+  height: 20vh;
+  background: #4a3e3e;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+footer .footer-icon{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+footer .iconify{
+  color: #ffffff; 
+  font-size: 900%;
+}
+footer .footer-body{
+  margin-left: 32px;
+}
+footer .footer-body h3{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:center;
+  color: #fff;
+  font-size:100%;
+  font-weight:bold;
+}
+footer .footer-body span{
+  font-size:100%;
+}
+@media screen and (max-width:920px){
+  body{
+    overflow: auto;
+  }
+  header{
+    display: flex;
+    flex-direction:column;
+    padding: 32px;
+    height: 100%;
+  }
+}
+@media screen and (max-width:720px){
+  header nav ul{
+    flex-direction:column;
+    height: 0;
+  }
+  header nav button.navbar-button{
+    display: flex;
+  }
+}
+@media screen and (max-width:480px){
+  header .header-title h1{
+    font-size: 32px;
+  }
+  header nav ul li{
+    margin-right: 5px;
+  }
+  footer .footer-body{
+    margin-left: 5px;
+  }
+}
